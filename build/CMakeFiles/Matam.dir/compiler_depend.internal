@@ -3,6 +3,7 @@
 
 CMakeFiles/Matam.dir/main.c.obj
  C:/matamex1/matamEx1/main.c
+ C:/matamex1/matamEx1/RLEList.h
  C:/Program Files/gcc/x86_64-w64-mingw32/include/stdio.h
  C:/Program Files/gcc/x86_64-w64-mingw32/include/corecrt_stdio_config.h
  C:/Program Files/gcc/x86_64-w64-mingw32/include/corecrt.h
@@ -14,4 +15,5 @@ CMakeFiles/Matam.dir/main.c.obj
  C:/Program Files/gcc/x86_64-w64-mingw32/include/_mingw_off_t.h
  C:/Program Files/gcc/x86_64-w64-mingw32/include/swprintf.inl
  C:/Program Files/gcc/x86_64-w64-mingw32/include/sec_api/stdio_s.h
+ C:/Program Files/gcc/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdbool.h
 
