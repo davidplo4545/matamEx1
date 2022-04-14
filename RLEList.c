@@ -1,4 +1,6 @@
 #include "RLEList.h"
+#include <stdlib.h>
+#include <stdio.h>
 #define FIRST_ASCII 0
 #define LAST_ASCII 255
 
@@ -9,6 +11,11 @@ typedef struct RLEList_t{
     struct RLEList_t* first;
 }*RLEList;
 
+void printNode(RLEList node)
+{
+    printf("%c %d\n",node->value, node->reps);
+}
+
 RLEList RLEListCreate()
 {
     RLEList list = malloc(sizeof(list));
@@ -17,6 +24,7 @@ RLEList RLEListCreate()
     list->next=NULL;
     list->first=list;   
     list->reps = 0;
+    printNode(list);
     return list;   
 }
 
@@ -31,34 +39,30 @@ void RLEListDestroy(RLEList list)
     }
 }
 
-int getListLength(RLEList list)
-{
-    if (!list)
-        return NULL;
-    int count=0;
-
-    RLEList current = list->first->next;
-    while(current)
-    {           
-        count++;
-        current = current->next;
-    }
-    return count;
-}
-
 
 RLEListResult RLEListAppend(RLEList list,char value)
 {
-    if (!list||value>LAST_ASCII||value<FIRST_ASCII)
+    if (!list || value>LAST_ASCII || value<FIRST_ASCII)
             return RLE_LIST_NULL_ARGUMENT;
-    RLEList newHead = malloc(sizeof(newHead));
-    if (!newHead)
-        return RLE_LIST_OUT_OF_MEMORY;
-    newHead->value = value;
-    newHeader->reps +=1;
-    list->next=newHead;
-    newHead->next = NULL;
-    newHead->first = list->first;
+    RLEList first = list->first;
+    if(first->value == value)
+    {
+        first->reps +=1;
+        printNode(first);
+    }
+    else
+    {
+        RLEList newHead = malloc(sizeof(newHead));
+
+        if (!newHead)
+            return RLE_LIST_OUT_OF_MEMORY;
+        newHead->value = value;
+        newHead->reps =1;
+        list->next=newHead;
+        newHead->next = NULL;
+        newHead->first = list->first;
+        printNode(newHead);
+    }
     return RLE_LIST_SUCCESS;
 }
 
@@ -71,7 +75,7 @@ int RLEListSize(RLEList list)
     while(first)
     {
         size+=list->reps;
-        first = first.next;
+        first = first->next;
     }    
     return size;
 }
@@ -84,11 +88,11 @@ RLEListResult RLEListRemove(RLEList list, int index)
     if(index<0)
         return RLE_LIST_INDEX_OUT_OF_BOUNDS;    
     RLEList current = list->first;
-    while(current.next)
+    while(current->next)
         {           
         if(index<=current->reps)
             {
-                RLEList* toRemove=current->next;
+                RLEList toRemove=current->next;
                 if(toRemove->reps == 1)
                 {
                     current->next = current ->next->next;
@@ -121,7 +125,7 @@ char RLEListGet(RLEList list, int index, RLEListResult *result)
     {           
         if(index<=current->reps)
         {
-            foundChar = current.value;
+            foundChar = current->value;
             return foundChar;
         }
         index-= current->reps;
@@ -130,10 +134,21 @@ char RLEListGet(RLEList list, int index, RLEListResult *result)
     return 0;
 }
 
-char* RLEListExportToString(RLEList list, RLEList* result)
+char* RLEListExportToString(RLEList list, RLEListResult* result)
 {
+    if(!list)
+    {
+        *result = RLE_LIST_NULL_ARGUMENT;
+        return NULL;
+    }
     int size = RLEListSize(list);
+
     char* str = malloc(sizeof(int)*(size*3));
+    if(!str)
+    {
+        *result = RLE_LIST_NULL_ARGUMENT;
+        return NULL;
+    }
     RLEList first = list->first->next;
     int curr=0;
     while(first)
@@ -144,9 +159,9 @@ char* RLEListExportToString(RLEList list, RLEList* result)
         curr+=3;
         first = first->next;
     }
+    *result = RLE_LIST_SUCCESS;
     str[curr] = '\0';
     return str;
-
 }
 
 RLEListResult RLEListMap(RLEList list, MapFunction map_function)
@@ -163,5 +178,3 @@ RLEListResult RLEListMap(RLEList list, MapFunction map_function)
     return RLE_LIST_SUCCESS;    
 }
 // RLEList a =RLEListCreate()
-
-//בלי  סחה כרוב כבווש ועגבניות

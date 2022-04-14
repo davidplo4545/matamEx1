@@ -70,7 +70,7 @@ void RLEListDestroy(RLEList list);
 
 
 /**
-*   RLEListAppend: add a specified character at the end of the list.
+*   RLEListAppend: ad gd a specified character at the end of the list.
 *
 * @param list - The RLE list for which to add the character
 * @param value - The character which needs to be added.

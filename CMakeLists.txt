@@ -3,4 +3,4 @@ project(Matam C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Matam main.c)
+add_executable(Matam main.c RLEList.c)

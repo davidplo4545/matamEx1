@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Matam.dir/RLEList.c.obj"
   "CMakeFiles/Matam.dir/main.c.obj"
   "Matam.exe"
   "Matam.exe.manifest"

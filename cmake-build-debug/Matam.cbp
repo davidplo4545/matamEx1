@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/david/Desktop/MatamEx1/RLEList.c">
+			<Option target="Matam"/>
+		</Unit>
+		<Unit filename="C:/Users/david/Desktop/MatamEx1/RLEList.h">
+			<Option target="Matam"/>
+		</Unit>
 		<Unit filename="C:/Users/david/Desktop/MatamEx1/main.c">
 			<Option target="Matam"/>
 		</Unit>
