@@ -2,19 +2,23 @@
 #include "RLEList.h"
 
 int main() {
-    char* str = "WWWWWBBBBCCCDDDWWWW";
+
+    char* str = "aaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbcccddddeeeee";
     RLEList list = RLEListCreate();
-    printf("here\n");
+
     while(*str)
     {
-        RLEListAppend(list, *str);
-        printf("Added\n");
+        RLEListAppend(list, *str);    
         str++;
     }
-    printf("here\n");
+   
     RLEListResult status=RLE_LIST_SUCCESS;
+    
+
+    
     char* result = RLEListExportToString(list,&status);
     if(status == RLE_LIST_SUCCESS)
+    printf("\nstring:\n");
         printf("%s", result);
     return 0;
 }

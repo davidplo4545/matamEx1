@@ -2,6 +2,7 @@
 // Created by Assaf on 07/03/2022.
 //
 
+
 #ifndef HW1_RLELIST_H
 #define HW1_RLELIST_H
 
@@ -24,12 +25,16 @@
 *   RLEListMap              - Transforms the list by applying a given function to each character in the list.
 */
 
-
 /** 
 * Typedef for defining the RLE list.
 * Complete the implementation of struct RLEList_t defined in RLEList.c
 */
+
+int numDigits (int num);
+void putDigits(char *str, int n, int digit);
 typedef struct RLEList_t *RLEList;
+
+RLEList moveOn(RLEList current);
 
 /** Enum used for returning error codes from RLE list functions */
 typedef enum {

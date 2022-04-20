@@ -4,27 +4,33 @@
 #define FIRST_ASCII 0
 #define LAST_ASCII 255
 
-typedef struct RLEList_t{
+
+
+
+
+typedef struct RLEList_t
+{
     int reps;
     char value;
     struct RLEList_t* next;
     struct RLEList_t* first;
 }*RLEList;
-
+/*
 void printNode(RLEList node)
 {
-    printf("%c %d\n",node->value, node->reps);
+    RLEList start = node->first;
+    printf("%c   %d\n",node->value, start);
 }
+*/
 
 RLEList RLEListCreate()
 {
-    RLEList list = malloc(sizeof(list));
+    RLEList list = malloc(sizeof(*list));
     if (list==NULL)
         return NULL;
     list->next=NULL;
     list->first=list;   
     list->reps = 0;
-    printNode(list);
     return list;   
 }
 
@@ -44,38 +50,41 @@ RLEListResult RLEListAppend(RLEList list,char value)
 {
     if (!list || value>LAST_ASCII || value<FIRST_ASCII)
             return RLE_LIST_NULL_ARGUMENT;
-    RLEList first = list->first;
-    if(first->value == value)
+
+    while (list->next != NULL)
+        list = list->next;
+
+    if((list->value) == value)
     {
-        first->reps +=1;
-        printNode(first);
+        list->reps +=1;
     }
     else
     {
-        RLEList newHead = malloc(sizeof(newHead));
+        RLEList newHead = malloc(sizeof(*newHead));
 
         if (!newHead)
             return RLE_LIST_OUT_OF_MEMORY;
+
+        list->next=newHead;  
+        newHead->next = NULL;   
+
         newHead->value = value;
-        newHead->reps =1;
-        list->next=newHead;
-        newHead->next = NULL;
+        newHead->reps = 1;
         newHead->first = list->first;
-        printNode(newHead);
     }
     return RLE_LIST_SUCCESS;
 }
+
 
 int RLEListSize(RLEList list)
 {
     if(!list)
         return -1;
-    RLEList first = list -> first;
     int size = 0;
-    while(first)
+    while(list)
     {
         size+=list->reps;
-        first = first->next;
+        list = list->next;
     }    
     return size;
 }
@@ -135,35 +144,73 @@ char RLEListGet(RLEList list, int index, RLEListResult *result)
 }
 
 char* RLEListExportToString(RLEList list, RLEListResult* result)
-{
+{   
     if(!list)
     {
         *result = RLE_LIST_NULL_ARGUMENT;
         return NULL;
     }
+
+ 
     int size = RLEListSize(list);
 
     char* str = malloc(sizeof(int)*(size*3));
+       
     if(!str)
     {
         *result = RLE_LIST_NULL_ARGUMENT;
         return NULL;
     }
-    RLEList first = list->first->next;
     int curr=0;
-    while(first)
+    while(list->next)
     {
-        str[curr] = first->value;
-        str[curr+1] = first->reps - '0';
-        str[curr+2] = '\n';
-        curr+=3;
-        first = first->next;
+        int repsLen = numDigits(list->next->reps);
+        
+        str[curr] = list->next->value;
+        putDigits(str+curr+1, list->next->reps, repsLen);
+
+        str[curr+1+repsLen] = '\n';
+        curr+=(2+repsLen);
+        list = list->next;
     }
     *result = RLE_LIST_SUCCESS;
     str[curr] = '\0';
     return str;
 }
 
+void putDigits(char *str, int n, int digit)
+{   
+    int temp = n;
+    for(int i=0; i<digit; i++)
+    {
+        for(int j = 1; j<(digit-i); j++)
+        {
+            temp = temp/10;
+        }
+        str[i]=temp%10 +'0';
+        
+        temp = n;
+    }    
+}
+
+int numDigits (int n)
+{
+    int count=0;
+    while(n)
+    {
+        n/=10;
+        count++;
+    }
+    return count;
+}
+/*
+RLEList getFirst(RLEList list)
+{
+    RLEList first = list->first;
+    printf("\nrghtnow: %c\n", first->value);
+    return first;
+}
+*/
 RLEListResult RLEListMap(RLEList list, MapFunction map_function)
 {
     if (!list)

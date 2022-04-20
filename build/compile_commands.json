@@ -3,5 +3,10 @@
   "directory": "C:/matamex1/matamEx1/build",
   "command": "C:\\PROGRA~1\\gcc\\bin\\gcc.exe   -g -std=gnu99 -o CMakeFiles\\Matam.dir\\main.c.obj -c C:\\matamex1\\matamEx1\\main.c",
   "file": "C:/matamex1/matamEx1/main.c"
+},
+{
+  "directory": "C:/matamex1/matamEx1/build",
+  "command": "C:\\PROGRA~1\\gcc\\bin\\gcc.exe   -g -std=gnu99 -o CMakeFiles\\Matam.dir\\RLEList.c.obj -c C:\\matamex1\\matamEx1\\RLEList.c",
+  "file": "C:/matamex1/matamEx1/RLEList.c"
 }
 ]
