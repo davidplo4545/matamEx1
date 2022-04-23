@@ -30,11 +30,12 @@
 * Complete the implementation of struct RLEList_t defined in RLEList.c
 */
 
-int numDigits (int num);
-void putDigits(char *str, int n, int digit);
-typedef struct RLEList_t *RLEList;
-
-RLEList moveOn(RLEList current);
+typedef struct RLEList_t
+{
+    int reps;
+    char value;
+    struct RLEList_t* next;
+}*RLEList;
 
 /** Enum used for returning error codes from RLE list functions */
 typedef enum {
