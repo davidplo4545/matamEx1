@@ -6,7 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/David/Desktop/MatamEx01/matamEx1/cmake-build-debug",
-		"source" : "C:/Users/David/Desktop/MatamEx01/matamEx1"
+		"build" : "C:/Users/david/Desktop/MatamEx01/matamEx1/cmake-build-debug",
+		"source" : "C:/Users/david/Desktop/MatamEx01/matamEx1"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 2
 	}
 }

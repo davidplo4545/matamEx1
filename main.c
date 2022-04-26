@@ -1,31 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "AsciiArtTool.h"
 
-RLEList test_function_input()
-{
-    FILE *in_stream = fopen("C:\\Users\\David\\Desktop\\MatamEx01\\matamEx1\\test.txt", "r");
-    if(!in_stream) return NULL;
-    RLEList list = asciiArtRead(in_stream);
-    fclose(in_stream);
-    return list;
-}
 
-void test_function_output1()
-{
-    FILE *out_stream = fopen("C:\\Users\\David\\Desktop\\MatamEx01\\matamEx1\\out.txt", "w");
-    RLEList list = test_function_input();
-    asciiArtPrint(list,out_stream);
-    fclose(out_stream);
-}
-
-void test_function_output2()
-{
-    FILE *out_stream = fopen("C:\\Users\\David\\Desktop\\MatamEx01\\matamEx1\\out.txt", "w");
-    RLEList list = test_function_input();
-    asciiArtPrintEncoded(list,out_stream);
-    fclose(out_stream);
-}
 
 char invertedMapping(char c)
 {
@@ -41,17 +19,14 @@ void printInvertedArt(char *inputPath, char *outputPath)
     RLEList list = asciiArtRead(inStream);
     fclose(inStream);
 
-    RLEListResult status = RLE_LIST_SUCCESS;
-    status = RLEListMap(list, invertedMapping);
+    RLEListResult status = RLEListMap(list, invertedMapping);
     if(status != RLE_LIST_SUCCESS) return;
-
-    char *result = RLEListExportToString(list, &status);
-//    printf("%s",result);
 
     FILE *outStream = fopen(outputPath, "w");
     if(!outStream) return;
     asciiArtPrint(list,outStream);
     fclose(outStream);
+    RLEListDestroy(list);
 }
 
 void printEncodedArt(char *inputPath, char *outputPath)
@@ -64,6 +39,7 @@ void printEncodedArt(char *inputPath, char *outputPath)
     if(!outStream) return;
     asciiArtPrintEncoded(list,outStream);
     fclose(outStream);
+    RLEListDestroy(list);
 }
 int main(int argc, char** argv) {
 
@@ -74,8 +50,6 @@ int main(int argc, char** argv) {
         printInvertedArt(argv[2], argv[3]);
     else
         printEncodedArt(argv[2], argv[3]);
-
-
     return 0;
 }
 

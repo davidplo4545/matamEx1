@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/david/Desktop/MatamEx01/matamEx1/AsciiArtTool.c
+AsciiArtTool.h
+C:/Users/david/Desktop/MatamEx01/matamEx1/AsciiArtTool.h
+RLEList.h
+C:/Users/david/Desktop/MatamEx01/matamEx1/RLEList.h
+stdlib.h
+C:/Users/david/Desktop/MatamEx01/matamEx1/stdlib.h
+stdio.h
+-
+
+C:/Users/david/Desktop/MatamEx01/matamEx1/AsciiArtTool.h
+stdio.h
+-
+stdbool.h
+-
+RLEList.h
+C:/Users/david/Desktop/MatamEx01/matamEx1/RLEList.h
+
+C:/Users/david/Desktop/MatamEx01/matamEx1/RLEList.h
+stdio.h
+-
+stdbool.h
+-
+
