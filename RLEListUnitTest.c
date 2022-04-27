@@ -591,7 +591,7 @@ bool RLEListMapTest()
     char* text;
     char mappedText[124] = {0};
     
-    text = "ABBabb------------\n\na";
+    text = "bbccccbbaaabba\n\n\n\nbbaaabbaaabbbba\n\n\n\n";
     for (int i = 0; i < FUNC_COUNT; i++)
     {
         RLEListDestroy(list);
@@ -602,24 +602,20 @@ bool RLEListMapTest()
         {
             *(mappedRunner++) = mapFunctions[i](*runner);
         }
-
         ASSERT_TEST_FULL_LIST(list, mappedText, destroy);
     }
-
-    text = "ABBabb------------\n\na";
-    for (int i = 0; i < FUNC_COUNT; i++)
-    {
-        RLEListDestroy(list);
-        MAKE_LIST_WITH_ASSERT(list, text, destroy);
-        ASSERT_TEST(RLEListMap(list, mapFunctions[i]) == RLE_LIST_SUCCESS, destroy);
-        char* mappedRunner = mappedText;
-        for (char* runner = text; *runner; runner++)
-        {
-            *(mappedRunner++) = mapFunctions[i](*runner);
-        }
-
-        ASSERT_TEST_FULL_LIST(list, mappedText, destroy);
-    }
+//    for (int i = 0; i < FUNC_COUNT; i++)
+//    {
+//        RLEListDestroy(list);
+//        MAKE_LIST_WITH_ASSERT(list, text, destroy);
+//        ASSERT_TEST(RLEListMap(list, mapFunctions[i]) == RLE_LIST_SUCCESS, destroy);
+//        char* mappedRunner = mappedText;
+//        for (char* runner = text; *runner; runner++)
+//        {
+//            *(mappedRunner++) = mapFunctions[i](*runner);
+//        }
+//        ASSERT_TEST_FULL_LIST(list, mappedText, destroy);
+//    }
 
     text = "__!@4 f g;dk\nfs m23mbf;erlk;lk;lkl;;\n;;\n \n     4l4ll1;23lk4;1lm.d, vdsm.vm.wlekm3k4";
     for (int i = 0; i < FUNC_COUNT; i++)

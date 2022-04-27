@@ -1,5 +1,4 @@
 #include "AsciiArtTool.h"
-#include "RLEList.h"
 #include "stdlib.h"
 #include <stdio.h>
 
@@ -75,7 +74,7 @@ RLEListResult asciiArtPrintEncoded(RLEList list, FILE *out_stream)
         i++;
         tempStr++;
     }
-    // There is still left in the buffer
+    // There is still data left in the buffer
     buffer[i]='\0';
     fputs(buffer, out_stream);
     free(str);

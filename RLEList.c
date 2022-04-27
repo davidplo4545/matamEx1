@@ -86,8 +86,7 @@ int RLEListSize(RLEList list)
 }
 
 RLEListResult RLEListRemove(RLEList list, int index)
-{   
-
+{
     if (!list)
     {
         return RLE_LIST_NULL_ARGUMENT;
@@ -98,47 +97,43 @@ RLEListResult RLEListRemove(RLEList list, int index)
     }
     RLEList current = list;
     while(current->next)
-        {           
+    {
         if(index < current->next->reps)
+        {
+            RLEList toRemove=current->next;
+            RLEList toRemoveExtra = NULL;
+
+            if(toRemove->reps == 1)
             {
-//                printf("Next Reps:%d Index:%d\n",current->next->reps, index);
-//                printf("Current Next Value:%c\n",current->next->value);
-                RLEList toRemove=current->next;
-                RLEList toRemoveExtra = NULL;
-
-                if(toRemove->reps == 1)
+                if(current->next->next != NULL )
                 {
-                    if(current->next->next != NULL )
+                    if(current->next->next->value ==  current->value)
                     {
-                        if(current->next->next->value ==  current->value)
-                        {
-                            current->reps += current->next->next->reps;
-                             toRemoveExtra = current->next->next;
-                        }
+                        current->reps += current->next->next->reps;
+                         toRemoveExtra = current->next->next;
                     }
-                    if(toRemoveExtra != NULL)
-                    {
-                        current->next = current->next->next->next;
-                        free(toRemoveExtra);
-                    }
-                    else
-                    {
-                        current->next = current->next->next;
-                    }
-                    free(toRemove);
-
-                    return RLE_LIST_SUCCESS;
+                }
+                if(toRemoveExtra != NULL)
+                {
+                    current->next = current->next->next->next;
+                    free(toRemoveExtra);
                 }
                 else
                 {
-                    toRemove->reps -=1;
-                    return RLE_LIST_SUCCESS;
+                    current->next = current->next->next;
                 }
+                free(toRemove);
 
+                return RLE_LIST_SUCCESS;
             }
+            else
+            {
+                toRemove->reps -=1;
+                return RLE_LIST_SUCCESS;
+            }
+        }
         index-=current->next->reps;
         current=current->next;
-        
     }
     return RLE_LIST_SUCCESS;
 }
@@ -188,32 +183,6 @@ char RLEListGet(RLEList list, int index, RLEListResult *result)
     return 0;
 }
 
-//static void putDigits(char *str, int n, int digit)
-//{
-//    int temp = n;
-//    for(int i=0; i<digit; i++)
-//    {
-//        for(int j = 1; j<(digit-i); j++)
-//        {
-//            temp = temp/10;
-//        }
-//        str[i]=temp%10 +'0';
-//
-//        temp = n;
-//    }
-//}
-//
-//static int numDigits (int n)
-//{
-//    int count=0;
-//    while(n)
-//    {
-//        n/=10;
-//        count++;
-//    }
-//    return count;
-//}
-
 char* RLEListExportToString(RLEList list, RLEListResult* result)
 {   
     if(!list)
@@ -252,12 +221,12 @@ RLEListResult RLEListMap(RLEList list, MapFunction map_function)
         return RLE_LIST_NULL_ARGUMENT;
     }
     RLEList current = list;
-    bool demme = true;
+    bool isDummy = true;
     while(current->next)
     {
         bool wasRemoved = false;
         current->next->value = map_function(current->next->value);
-        if(!demme)
+        if(!isDummy)
         {
             if(current->next->value == current->value)
             {
@@ -272,7 +241,7 @@ RLEListResult RLEListMap(RLEList list, MapFunction map_function)
         {
             current = current->next;
         }
-        demme = false;
+        isDummy = false;
     }
     return RLE_LIST_SUCCESS;    
 }

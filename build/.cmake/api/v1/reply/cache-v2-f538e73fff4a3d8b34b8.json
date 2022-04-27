@@ -15,7 +15,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/addr2line.exe"
+			"value" : "C:/TDM-GCC-64/bin/addr2line.exe"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -31,7 +31,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/ar.exe"
+			"value" : "C:/TDM-GCC-64/bin/ar.exe"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/matamex1/matamEx1/build"
+			"value" : "c:/Users/david/Desktop/MatamEx01/matamEx1/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/g++.exe"
+			"value" : "C:/TDM-GCC-64/bin/g++.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER",
@@ -171,7 +171,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/gcc.exe"
+			"value" : "C:/TDM-GCC-64/bin/gcc.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -187,7 +187,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/gcc-ar.exe"
+			"value" : "C:/TDM-GCC-64/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -203,7 +203,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/gcc-ranlib.exe"
+			"value" : "C:/TDM-GCC-64/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -315,7 +315,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/dlltool.exe"
+			"value" : "C:/TDM-GCC-64/bin/dlltool.exe"
 		},
 		{
 			"name" : "CMAKE_EDIT_COMMAND",
@@ -455,7 +455,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "MinGW Makefiles"
+			"value" : "Unix Makefiles"
 		},
 		{
 			"name" : "CMAKE_GENERATOR_INSTANCE",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/matamex1/matamEx1"
+			"value" : "C:/Users/david/Desktop/MatamEx01/matamEx1"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -543,7 +543,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/ld.exe"
+			"value" : "C:/TDM-GCC-64/bin/ld.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -559,7 +559,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/PROGRA~1/gcc/bin/mingw32-make.exe"
+			"value" : "C:/PROGRA~2/GnuWin32/bin/make.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -655,7 +655,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/nm.exe"
+			"value" : "C:/TDM-GCC-64/bin/nm.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -683,7 +683,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/objcopy.exe"
+			"value" : "C:/TDM-GCC-64/bin/objcopy.exe"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -699,7 +699,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/objdump.exe"
+			"value" : "C:/TDM-GCC-64/bin/objdump.exe"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -763,7 +763,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/ranlib.exe"
+			"value" : "C:/TDM-GCC-64/bin/ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -779,7 +779,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/windres.exe"
+			"value" : "C:/TDM-GCC-64/bin/windres.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER_WORKS",
@@ -887,7 +887,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/readelf.exe"
+			"value" : "C:/TDM-GCC-64/bin/readelf.exe"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1107,7 +1107,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files/gcc/bin/strip.exe"
+			"value" : "C:/TDM-GCC-64/bin/strip.exe"
 		},
 		{
 			"name" : "CMAKE_VERBOSE_MAKEFILE",
@@ -1135,7 +1135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/matamex1/matamEx1/build"
+			"value" : "C:/Users/david/Desktop/MatamEx01/matamEx1/build"
 		},
 		{
 			"name" : "Matam_IS_TOP_LEVEL",
@@ -1159,7 +1159,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/matamex1/matamEx1"
+			"value" : "C:/Users/david/Desktop/MatamEx01/matamEx1"
 		}
 	],
 	"kind" : "cache",

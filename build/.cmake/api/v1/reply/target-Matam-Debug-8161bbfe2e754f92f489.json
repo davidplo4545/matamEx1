@@ -105,7 +105,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.c",
+			"path" : "RLEListUnitTest.c",
 			"sourceGroupIndex" : 0
 		},
 		{

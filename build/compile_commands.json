@@ -1,17 +1,17 @@
 [
 {
-  "directory": "C:/matamex1/matamEx1/build",
-  "command": "C:\\PROGRA~1\\gcc\\bin\\gcc.exe   -g -std=gnu99 -o CMakeFiles\\Matam.dir\\main.c.obj -c C:\\matamex1\\matamEx1\\main.c",
-  "file": "C:/matamex1/matamEx1/main.c"
+  "directory": "C:/Users/david/Desktop/MatamEx01/matamEx1/build",
+  "command": "C:/TDM-GCC-64/bin/gcc.exe   -g -std=gnu99 -o CMakeFiles/Matam.dir/RLEListUnitTest.c.obj -c C:/Users/david/Desktop/MatamEx01/matamEx1/RLEListUnitTest.c",
+  "file": "C:/Users/david/Desktop/MatamEx01/matamEx1/RLEListUnitTest.c"
 },
 {
-  "directory": "C:/matamex1/matamEx1/build",
-  "command": "C:\\PROGRA~1\\gcc\\bin\\gcc.exe   -g -std=gnu99 -o CMakeFiles\\Matam.dir\\RLEList.c.obj -c C:\\matamex1\\matamEx1\\RLEList.c",
-  "file": "C:/matamex1/matamEx1/RLEList.c"
+  "directory": "C:/Users/david/Desktop/MatamEx01/matamEx1/build",
+  "command": "C:/TDM-GCC-64/bin/gcc.exe   -g -std=gnu99 -o CMakeFiles/Matam.dir/RLEList.c.obj -c C:/Users/david/Desktop/MatamEx01/matamEx1/RLEList.c",
+  "file": "C:/Users/david/Desktop/MatamEx01/matamEx1/RLEList.c"
 },
 {
-  "directory": "C:/matamex1/matamEx1/build",
-  "command": "C:\\PROGRA~1\\gcc\\bin\\gcc.exe   -g -std=gnu99 -o CMakeFiles\\Matam.dir\\AsciiArtTool.c.obj -c C:\\matamex1\\matamEx1\\AsciiArtTool.c",
-  "file": "C:/matamex1/matamEx1/AsciiArtTool.c"
+  "directory": "C:/Users/david/Desktop/MatamEx01/matamEx1/build",
+  "command": "C:/TDM-GCC-64/bin/gcc.exe   -g -std=gnu99 -o CMakeFiles/Matam.dir/AsciiArtTool.c.obj -c C:/Users/david/Desktop/MatamEx01/matamEx1/AsciiArtTool.c",
+  "file": "C:/Users/david/Desktop/MatamEx01/matamEx1/AsciiArtTool.c"
 }
 ]

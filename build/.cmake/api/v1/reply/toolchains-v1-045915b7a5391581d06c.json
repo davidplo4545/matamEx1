@@ -10,17 +10,17 @@
 				{
 					"includeDirectories" : 
 					[
-						"C:/Program Files/gcc/lib/gcc/x86_64-w64-mingw32/10.3.0/include",
-						"C:/Program Files/gcc/include",
-						"C:/Program Files/gcc/lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed",
-						"C:/Program Files/gcc/x86_64-w64-mingw32/include"
+						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include",
+						"C:/TDM-GCC-64/include",
+						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed",
+						"C:/TDM-GCC-64/x86_64-w64-mingw32/include"
 					],
 					"linkDirectories" : 
 					[
-						"C:/Program Files/gcc/lib/gcc/x86_64-w64-mingw32/10.3.0",
-						"C:/Program Files/gcc/lib/gcc",
-						"C:/Program Files/gcc/x86_64-w64-mingw32/lib",
-						"C:/Program Files/gcc/lib"
+						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0",
+						"C:/TDM-GCC-64/lib/gcc",
+						"C:/TDM-GCC-64/x86_64-w64-mingw32/lib",
+						"C:/TDM-GCC-64/lib"
 					],
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : 
@@ -48,7 +48,7 @@
 						"kernel32"
 					]
 				},
-				"path" : "C:/Program Files/gcc/bin/gcc.exe",
+				"path" : "C:/TDM-GCC-64/bin/gcc.exe",
 				"version" : "10.3.0"
 			},
 			"language" : "C",
@@ -62,7 +62,7 @@
 			"compiler" : 
 			{
 				"implicit" : {},
-				"path" : "C:/Program Files/gcc/bin/windres.exe"
+				"path" : "C:/TDM-GCC-64/bin/windres.exe"
 			},
 			"language" : "RC",
 			"sourceFileExtensions" : 
