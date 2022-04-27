@@ -128,6 +128,30 @@ Matam/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam.dir\build.make CMakeFiles/Matam.dir/build
 .PHONY : Matam/fast
 
+AsciiArtTool.obj: AsciiArtTool.c.obj
+.PHONY : AsciiArtTool.obj
+
+# target to build an object file
+AsciiArtTool.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam.dir\build.make CMakeFiles/Matam.dir/AsciiArtTool.c.obj
+.PHONY : AsciiArtTool.c.obj
+
+AsciiArtTool.i: AsciiArtTool.c.i
+.PHONY : AsciiArtTool.i
+
+# target to preprocess a source file
+AsciiArtTool.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam.dir\build.make CMakeFiles/Matam.dir/AsciiArtTool.c.i
+.PHONY : AsciiArtTool.c.i
+
+AsciiArtTool.s: AsciiArtTool.c.s
+.PHONY : AsciiArtTool.s
+
+# target to generate assembly for a file
+AsciiArtTool.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam.dir\build.make CMakeFiles/Matam.dir/AsciiArtTool.c.s
+.PHONY : AsciiArtTool.c.s
+
 RLEList.obj: RLEList.c.obj
 .PHONY : RLEList.obj
 
@@ -185,6 +209,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Matam
+	@echo ... AsciiArtTool.obj
+	@echo ... AsciiArtTool.i
+	@echo ... AsciiArtTool.s
 	@echo ... RLEList.obj
 	@echo ... RLEList.i
 	@echo ... RLEList.s

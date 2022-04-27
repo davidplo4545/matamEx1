@@ -19,4 +19,6 @@ CMakeFiles/Matam.dir/RLEList.c.obj: C:\matamex1\matamEx1\RLEList.c \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/limits.h \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/crtdefs.h \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
- C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/malloc.h
+ C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/malloc.h \
+ C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/string.h \
+ C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/sec_api/string_s.h

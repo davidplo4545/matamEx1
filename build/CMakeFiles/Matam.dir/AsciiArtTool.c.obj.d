@@ -1,4 +1,5 @@
-CMakeFiles/Matam.dir/main.c.obj: C:\matamex1\matamEx1\main.c \
+CMakeFiles/Matam.dir/AsciiArtTool.c.obj: \
+ C:\matamex1\matamEx1\AsciiArtTool.c C:\matamex1\matamEx1\AsciiArtTool.h \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/stdio.h \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/corecrt.h \
@@ -10,16 +11,13 @@ CMakeFiles/Matam.dir/main.c.obj: C:\matamex1\matamEx1\main.c \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/_mingw_off_t.h \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/swprintf.inl \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/string.h \
- C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/crtdefs.h \
- C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:/PROGRA~1/gcc/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdbool.h \
+ C:\matamex1\matamEx1\RLEList.h \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/stdlib.h \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  C:/PROGRA~1/gcc/lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed/limits.h \
  C:/PROGRA~1/gcc/lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed/syslimits.h \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/limits.h \
+ C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/crtdefs.h \
  C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
- C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/malloc.h \
- C:\matamex1\matamEx1\AsciiArtTool.h \
- C:/PROGRA~1/gcc/lib/gcc/x86_64-w64-mingw32/10.3.0/include/stdbool.h \
- C:\matamex1\matamEx1\RLEList.h
+ C:/PROGRA~1/gcc/x86_64-w64-mingw32/include/malloc.h

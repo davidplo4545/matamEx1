@@ -251,12 +251,28 @@ RLEListResult RLEListMap(RLEList list, MapFunction map_function)
     {
         return RLE_LIST_NULL_ARGUMENT;
     }
-    RLEList current = list->next;
-
-    while(current)
+    RLEList current = list;
+    bool demme = true;
+    while(current->next)
     {
-        current->value = map_function(current->value);
-        current = current->next;
+        bool wasRemoved = false;
+        current->next->value = map_function(current->next->value);
+        if(!demme)
+        {
+            if(current->next->value == current->value)
+            {
+                current->reps+=current->next->reps;
+                RLEList toRemove = current->next;
+                current->next = current->next->next;
+                free(toRemove);
+                wasRemoved = true;
+            }
+        }
+        if(!wasRemoved)
+        {
+            current = current->next;
+        }
+        demme = false;
     }
     return RLE_LIST_SUCCESS;    
 }
