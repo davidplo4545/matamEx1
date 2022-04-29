@@ -86,7 +86,7 @@
 		<Unit filename="C:/Users/david/Desktop/MatamEx01/matamEx1/RLEList.h">
 			<Option target="Matam"/>
 		</Unit>
-		<Unit filename="C:/Users/david/Desktop/MatamEx01/matamEx1/main.c">
+		<Unit filename="C:/Users/david/Desktop/MatamEx01/matamEx1/RLEListUnitTest.c">
 			<Option target="Matam"/>
 		</Unit>
 		<Unit filename="C:/Users/david/Desktop/MatamEx01/matamEx1/CMakeLists.txt">

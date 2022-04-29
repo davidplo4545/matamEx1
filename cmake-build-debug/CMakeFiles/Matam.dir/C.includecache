@@ -6,25 +6,29 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/david/Desktop/MatamEx01/matamEx1/AsciiArtTool.h
-stdio.h
--
-stdbool.h
--
-RLEList.h
-C:/Users/david/Desktop/MatamEx01/matamEx1/RLEList.h
-
 C:/Users/david/Desktop/MatamEx01/matamEx1/RLEList.h
 stdio.h
 -
 stdbool.h
 -
 
-C:/Users/david/Desktop/MatamEx01/matamEx1/main.c
+C:/Users/david/Desktop/MatamEx01/matamEx1/RLEListUnitTest.c
 stdio.h
+-
+stdlib.h
 -
 string.h
 -
-AsciiArtTool.h
-C:/Users/david/Desktop/MatamEx01/matamEx1/AsciiArtTool.h
+assert.h
+-
+RLEList.h
+C:/Users/david/Desktop/MatamEx01/matamEx1/RLEList.h
+test_utilities.h
+C:/Users/david/Desktop/MatamEx01/matamEx1/test_utilities.h
+
+C:/Users/david/Desktop/MatamEx01/matamEx1/test_utilities.h
+stdbool.h
+-
+stdio.h
+-
 

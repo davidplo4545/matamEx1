@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/david/Desktop/MatamEx01/matamEx1/AsciiArtTool.c" "C:/Users/david/Desktop/MatamEx01/matamEx1/cmake-build-debug/CMakeFiles/Matam.dir/AsciiArtTool.c.obj"
   "C:/Users/david/Desktop/MatamEx01/matamEx1/RLEList.c" "C:/Users/david/Desktop/MatamEx01/matamEx1/cmake-build-debug/CMakeFiles/Matam.dir/RLEList.c.obj"
-  "C:/Users/david/Desktop/MatamEx01/matamEx1/main.c" "C:/Users/david/Desktop/MatamEx01/matamEx1/cmake-build-debug/CMakeFiles/Matam.dir/main.c.obj"
+  "C:/Users/david/Desktop/MatamEx01/matamEx1/RLEListUnitTest.c" "C:/Users/david/Desktop/MatamEx01/matamEx1/cmake-build-debug/CMakeFiles/Matam.dir/RLEListUnitTest.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

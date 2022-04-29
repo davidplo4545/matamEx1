@@ -2,9 +2,9 @@
 #include <string.h>
 #include "AsciiArtTool.h"
 
-#define INVERTED_FLAG "-i"
-#define ENCODED_FLAG "-e"
-
+#define INVERTED_FLAG 'i'
+#define ENCODED_FLAG 'e'
+#define REQUIRED_ARGS_COUNT 4
 #define SPACE ' '
 #define INVERT_SIGN '@'
 
@@ -19,6 +19,9 @@ char invertedMapping(char c)
     }
     return c;
 }
+
+// Reads from an ascii art stream and
+// outputs the "inverted" art into a new file
 void printInvertedArt(FILE *inStream, char *outputPath)
 {
     if(!inStream) {
@@ -43,6 +46,8 @@ void printInvertedArt(FILE *inStream, char *outputPath)
     RLEListDestroy(list);
 }
 
+// Reads from an ascii art stream and
+// outputs the "encoded" art form into a new file
 void printEncodedArt(FILE *inStream, char *outputPath)
 {
     if(!inStream)
@@ -62,7 +67,7 @@ void printEncodedArt(FILE *inStream, char *outputPath)
 }
 int main(int argc, char** argv) {
 
-    if(argc != 4)
+    if(argc != REQUIRED_ARGS_COUNT)
     {
         return 0;
     }
@@ -76,9 +81,9 @@ int main(int argc, char** argv) {
     if(!inStream){
         return 0;
     }
-    if(currFlag[1] == 'i')
+    if(currFlag[1] == INVERTED_FLAG)
         printInvertedArt(inStream, argv[3]);
-    else if(currFlag[1] == 'e')
+    else if(currFlag[1] == ENCODED_FLAG)
         printEncodedArt(inStream, argv[3]);
     return 0;
 }

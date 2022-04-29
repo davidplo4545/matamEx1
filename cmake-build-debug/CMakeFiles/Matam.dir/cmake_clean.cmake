@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Matam.dir/AsciiArtTool.c.obj"
   "CMakeFiles/Matam.dir/RLEList.c.obj"
-  "CMakeFiles/Matam.dir/main.c.obj"
+  "CMakeFiles/Matam.dir/RLEListUnitTest.c.obj"
   "Matam.exe"
   "Matam.exe.manifest"
   "Matam.pdb"

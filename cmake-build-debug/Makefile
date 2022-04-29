@@ -176,29 +176,29 @@ RLEList.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam.dir\build.make CMakeFiles/Matam.dir/RLEList.c.s
 .PHONY : RLEList.c.s
 
-main.obj: main.c.obj
-.PHONY : main.obj
+RLEListUnitTest.obj: RLEListUnitTest.c.obj
+.PHONY : RLEListUnitTest.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam.dir\build.make CMakeFiles/Matam.dir/main.c.obj
-.PHONY : main.c.obj
+RLEListUnitTest.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam.dir\build.make CMakeFiles/Matam.dir/RLEListUnitTest.c.obj
+.PHONY : RLEListUnitTest.c.obj
 
-main.i: main.c.i
-.PHONY : main.i
+RLEListUnitTest.i: RLEListUnitTest.c.i
+.PHONY : RLEListUnitTest.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam.dir\build.make CMakeFiles/Matam.dir/main.c.i
-.PHONY : main.c.i
+RLEListUnitTest.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam.dir\build.make CMakeFiles/Matam.dir/RLEListUnitTest.c.i
+.PHONY : RLEListUnitTest.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+RLEListUnitTest.s: RLEListUnitTest.c.s
+.PHONY : RLEListUnitTest.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam.dir\build.make CMakeFiles/Matam.dir/main.c.s
-.PHONY : main.c.s
+RLEListUnitTest.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Matam.dir\build.make CMakeFiles/Matam.dir/RLEListUnitTest.c.s
+.PHONY : RLEListUnitTest.c.s
 
 # Help Target
 help:
@@ -215,9 +215,9 @@ help:
 	@echo ... RLEList.obj
 	@echo ... RLEList.i
 	@echo ... RLEList.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... RLEListUnitTest.obj
+	@echo ... RLEListUnitTest.i
+	@echo ... RLEListUnitTest.s
 .PHONY : help
 
 

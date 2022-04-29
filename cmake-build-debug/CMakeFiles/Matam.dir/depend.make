@@ -5,7 +5,7 @@ CMakeFiles/Matam.dir/AsciiArtTool.c.obj: \
  ../AsciiArtTool.c \
  ../AsciiArtTool.h \
  ../RLEList.h
-CMakeFiles/Matam.dir/main.c.obj: \
- ../AsciiArtTool.h \
+CMakeFiles/Matam.dir/RLEListUnitTest.c.obj: \
  ../RLEList.h \
- ../main.c
+ ../RLEListUnitTest.c \
+ ../test_utilities.h

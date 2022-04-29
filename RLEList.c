@@ -1,8 +1,14 @@
 #include "RLEList.h"
 #include <stdlib.h>
 #include <string.h>
+
 #define FIRST_ASCII 0
 #define LAST_ASCII 255
+
+#define MAX_SIZE_MULT 3
+#define END_STRING '\0'
+#define NEW_LINE '\n'
+
 struct RLEList_t
 {
     int reps;
@@ -19,7 +25,7 @@ RLEList RLEListCreate()
         return NULL;
     }
     list->next=NULL;
-    list->value='\0';
+    list->value=END_STRING;
     list->reps = 0;
     return list;   
 }
@@ -159,7 +165,6 @@ char RLEListGet(RLEList list, int index, RLEListResult *result)
         return 0;
     }
 
-
     RLEList current = list->next;
     char foundChar;
     while(current)
@@ -174,12 +179,6 @@ char RLEListGet(RLEList list, int index, RLEListResult *result)
         current=current->next;
     }
 
-    if(!result) {
-        if (*result != RLE_LIST_SUCCESS)
-        {
-            return 0;
-        }
-    }
     return 0;
 }
 
@@ -187,15 +186,14 @@ char* RLEListExportToString(RLEList list, RLEListResult* result)
 {   
     if(!list)
     {
-        *result = RLE_LIST_NULL_ARGUMENT;
+        setResult(result,RLE_LIST_NULL_ARGUMENT);
         return NULL;
     }
     int size = RLEListSize(list);
-    char* str = malloc(sizeof(char)*(size*3 + 1));
-       
+    char* str = malloc(sizeof(char)*(size*MAX_SIZE_MULT + 1));
     if(!str)
     {
-        *result = RLE_LIST_NULL_ARGUMENT;
+        setResult(result,RLE_LIST_OUT_OF_MEMORY);
         return NULL;
     }
     int curr=0;
@@ -204,12 +202,11 @@ char* RLEListExportToString(RLEList list, RLEListResult* result)
         str[curr++] = list->next->value;
         sprintf(str+curr,"%d",list->next->reps);
         curr = strlen(str);
-        str[curr++] ='\n';
+        str[curr++] =NEW_LINE;
         list = list->next;
     }
-
-    *result = RLE_LIST_SUCCESS;
-    str[curr] = '\0';
+    setResult(result,RLE_LIST_SUCCESS);
+    str[curr] = END_STRING;
     return str;
 }
 

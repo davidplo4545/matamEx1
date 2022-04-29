@@ -65,18 +65,18 @@ include CMakeFiles/Matam.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Matam.dir/flags.make
 
-CMakeFiles/Matam.dir/main.c.obj: CMakeFiles/Matam.dir/flags.make
-CMakeFiles/Matam.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\david\Desktop\MatamEx01\matamEx1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Matam.dir/main.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Matam.dir\main.c.obj -c C:\Users\david\Desktop\MatamEx01\matamEx1\main.c
+CMakeFiles/Matam.dir/RLEListUnitTest.c.obj: CMakeFiles/Matam.dir/flags.make
+CMakeFiles/Matam.dir/RLEListUnitTest.c.obj: ../RLEListUnitTest.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\david\Desktop\MatamEx01\matamEx1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Matam.dir/RLEListUnitTest.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Matam.dir\RLEListUnitTest.c.obj -c C:\Users\david\Desktop\MatamEx01\matamEx1\RLEListUnitTest.c
 
-CMakeFiles/Matam.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Matam.dir/main.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\david\Desktop\MatamEx01\matamEx1\main.c > CMakeFiles\Matam.dir\main.c.i
+CMakeFiles/Matam.dir/RLEListUnitTest.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Matam.dir/RLEListUnitTest.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\david\Desktop\MatamEx01\matamEx1\RLEListUnitTest.c > CMakeFiles\Matam.dir\RLEListUnitTest.c.i
 
-CMakeFiles/Matam.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Matam.dir/main.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\david\Desktop\MatamEx01\matamEx1\main.c -o CMakeFiles\Matam.dir\main.c.s
+CMakeFiles/Matam.dir/RLEListUnitTest.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Matam.dir/RLEListUnitTest.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\david\Desktop\MatamEx01\matamEx1\RLEListUnitTest.c -o CMakeFiles\Matam.dir\RLEListUnitTest.c.s
 
 CMakeFiles/Matam.dir/RLEList.c.obj: CMakeFiles/Matam.dir/flags.make
 CMakeFiles/Matam.dir/RLEList.c.obj: ../RLEList.c
@@ -106,14 +106,14 @@ CMakeFiles/Matam.dir/AsciiArtTool.c.s: cmake_force
 
 # Object files for target Matam
 Matam_OBJECTS = \
-"CMakeFiles/Matam.dir/main.c.obj" \
+"CMakeFiles/Matam.dir/RLEListUnitTest.c.obj" \
 "CMakeFiles/Matam.dir/RLEList.c.obj" \
 "CMakeFiles/Matam.dir/AsciiArtTool.c.obj"
 
 # External object files for target Matam
 Matam_EXTERNAL_OBJECTS =
 
-Matam.exe: CMakeFiles/Matam.dir/main.c.obj
+Matam.exe: CMakeFiles/Matam.dir/RLEListUnitTest.c.obj
 Matam.exe: CMakeFiles/Matam.dir/RLEList.c.obj
 Matam.exe: CMakeFiles/Matam.dir/AsciiArtTool.c.obj
 Matam.exe: CMakeFiles/Matam.dir/build.make

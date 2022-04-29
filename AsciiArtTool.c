@@ -2,6 +2,7 @@
 #include "stdlib.h"
 #include <stdio.h>
 
+#define END_STRING '\0'
 #define CHUNK_SIZE 256
 RLEList asciiArtRead(FILE *in_stream)
 {
@@ -44,7 +45,8 @@ RLEListResult asciiArtPrint(RLEList list,FILE *out_stream)
         }
         buffer[bufferIndex]= curr;
     }
-    buffer[bufferIndex] = '\0';
+    // There is still data left in the buffer
+    buffer[bufferIndex] = END_STRING;
     fputs(buffer, out_stream);
     return RLE_LIST_SUCCESS;
 }
@@ -75,7 +77,7 @@ RLEListResult asciiArtPrintEncoded(RLEList list, FILE *out_stream)
         tempStr++;
     }
     // There is still data left in the buffer
-    buffer[i]='\0';
+    buffer[i]=END_STRING;
     fputs(buffer, out_stream);
     free(str);
     return RLE_LIST_SUCCESS;
